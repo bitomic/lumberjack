@@ -1,0 +1,11 @@
+name: Node.js CI
+
+on:
+  push:
+    branches: [ main ]
+  pull_request_target:
+    branches: [ main ]
+
+jobs:
+  build:
+    uses: bitomic/utilities/.github/workflows/node.js.yml@f38ffa989acbdbff06fd52b0907c231bdd6ced9a

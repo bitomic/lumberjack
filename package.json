@@ -1,0 +1,36 @@
+{
+  "name": "yarn-template",
+  "version": "1.0.0",
+  "main": "dist/main.js",
+  "author": "bitomic",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "hooks": "husky install .github/husky",
+    "build": "rimraf tsconfig.tsbuildinfo dist && yarn tsc --listEmittedFiles --incremental",
+    "build:watch": "yarn tsc -w --incremental",
+    "lint": "eslint src/ --ext .ts --cache",
+    "lint:fix": "eslint src/ --fix --ext .ts --cache",
+    "start": "yarn node dist/main.js"
+  },
+  "packageManager": "yarn@3.5.0",
+  "devDependencies": {
+    "@bitomic/eslint-config": "^1.2.0",
+    "@commitlint/cli": "^17.6.1",
+    "@commitlint/config-conventional": "^17.6.1",
+    "@types/node": "^18.16.3",
+    "@typescript-eslint/eslint-plugin": "^5.59.1",
+    "@typescript-eslint/parser": "^5.59.1",
+    "eslint": "^8.39.0",
+    "husky": "^8.0.3",
+    "lint-staged": "^13.2.2",
+    "rimraf": "^5.0.0",
+    "typescript": "^5.0.4"
+  },
+  "dependencies": {
+    "ts-dotenv": "^0.9.1"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
