@@ -11,5 +11,6 @@
 *.db
 demo
 dist
+node_modules
 *.sqlite
 tsconfig.tsbuildinfo
