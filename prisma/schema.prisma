@@ -1,0 +1,29 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+enum Level {
+  DEBUG
+  ERROR
+  INFO
+  WARN
+}
+
+model Logs {
+  data Json?
+  id Int @default(autoincrement()) @id
+  level Level
+  message String?
+  service String
+  timestamp DateTime @default(now())
+
+  @@index([service])
+}

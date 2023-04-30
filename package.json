@@ -28,6 +28,8 @@
     "typescript": "^5.0.4"
   },
   "dependencies": {
+    "@prisma/client": "^4.13.0",
+    "prisma": "^4.13.0",
     "ts-dotenv": "^0.9.1"
   },
   "publishConfig": {
