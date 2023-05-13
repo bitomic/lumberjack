@@ -29,6 +29,7 @@
   },
   "dependencies": {
     "@prisma/client": "^4.13.0",
+    "@sapphire/shapeshift": "^3.8.2",
     "prisma": "^4.13.0",
     "ts-dotenv": "^0.9.1"
   },
