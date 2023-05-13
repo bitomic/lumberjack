@@ -9,6 +9,8 @@
     "hooks": "husky install .github/husky",
     "build": "rimraf tsconfig.tsbuildinfo dist && yarn tsc --listEmittedFiles --incremental",
     "build:watch": "yarn tsc -w --incremental",
+    "db:generate": "yarn prisma generate",
+    "db:migrate": "yarn prisma migrate deploy || true",
     "lint": "eslint src/ --ext .ts --cache",
     "lint:fix": "eslint src/ --fix --ext .ts --cache",
     "start": "yarn node dist/main.js"
