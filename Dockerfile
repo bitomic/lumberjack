@@ -56,5 +56,6 @@ COPY --chown=node:node --from=builder /home/node/app/node_modules/.prisma node_m
 RUN chown node:node /home/node/app
 
 USER node
+EXPOSE 1337
 
 CMD doppler run yarn db:migrate ; doppler run yarn start
