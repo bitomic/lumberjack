@@ -18,10 +18,12 @@ enum Level {
 }
 
 model Logs {
+  component String?
   data Json?
   id Int @default(autoincrement()) @id
   level Level
   message String?
+  module String?
   service String
   timestamp DateTime @default(now())
 

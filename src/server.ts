@@ -14,9 +14,11 @@ const server = net.createServer( socket => {
 	socket.on( 'data', async data => {
 		try {
 			const schema = s.object( {
+				component: s.string.optional,
 				data: s.object( {} ).passthrough.optional,
 				level: s.nativeEnum( Level ),
 				message: s.string.optional,
+				module: s.string.optional,
 				service: s.string
 			} ).strict
 			const json = schema.parse( JSON.parse( data.toString() ) )
